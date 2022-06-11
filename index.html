@@ -2,7 +2,58 @@
 {% load bootstrap3 %}
 
 {% block header %}
-  <h1>State Temperature Predictor</h1>
+<body>
+  <div class="fixed navbar">
+      <nav>
+          <a href="index.html"><img src="homeText2.png"></a>
+          <div class="nav-links" id="navLinks">
+              <i class="fa fa-xmark" onclick="hideMenu()"></i>
+              <ul>
+                  <li><a href="index.html">HOME</a></li>
+              </ul>
+          </div>  
+          <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav> 
+  </div>
+
+<!---phone toggle menu--->
+  <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu(){
+          navLinks.style.right = "0px";
+      }
+      function hideMenu(){
+          navLinks.style.right = "-225px";
+      }
+  </script>
+
+<!----index---->
+  <div class="homeBanner">
+      <div class="homeText">
+            <div class="homeBannerImgPhone"></div>
+            <div class="homeButton">
+              <a href="" class="hero-btn">Calculate</a>
+            </div>
+            
+      </div>
+  </div>
+  <section class="blank">
+      <hr class="breakLine">
+      <h1>Our Mission</h1>
+      <p>Our Mission is to raise awareness of how the rate of global temperatures rising have been rapidly increasing because of a lack of effort to combat climate change.</p>
+      <!-- <div class="row">
+          <div class="blank-col">
+              <h3>Live Race</h3>
+              <p>abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde </p>
+          </div>
+          <div class="blank-col">
+              <h3>Virtual Race</h3>
+              <p>abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde abcde </p>
+          </div>
+      </div> -->
+  </section>
+</body>  
+<h1>State Temperature Predictor</h1>
   <form>
     <label for="fname">State:</label><br>
     <input type="string" id="state"><br>
